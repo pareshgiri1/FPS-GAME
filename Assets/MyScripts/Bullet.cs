@@ -6,9 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public int speed = 2 ;
     float LifeTime;
-    public Rigidbody rb;
-
-     public Transform bullet;
+    
     // Start is called before the first frame update
     void Start()
     {
