@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class MyPlayerMovement : MonoBehaviour
 {
+    public static MyPlayerMovement instance;
     public CharacterController character;
     public float speed = 5;
     float VerticalInput ;
     float HorizontalInput;
+    private void Awake()
+    {
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {

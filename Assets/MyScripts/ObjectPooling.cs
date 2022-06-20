@@ -18,7 +18,7 @@ public class ObjectPooling : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             GameObject bullet = GetPooledObject();
             if (bullet != null)
