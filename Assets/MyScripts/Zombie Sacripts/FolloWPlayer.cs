@@ -22,13 +22,14 @@ public class FolloWPlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         Vector3 v = MyPlayerMovement.instance.transform.position - transform.position;
         if (v.magnitude < distance)
         {
             rb.velocity = Vector3.zero;
             _animator.SetBool("Attack", true);
+            MyPlayerMovement.instance.ReduceHealth(0.5f);
         }
         else
         {
