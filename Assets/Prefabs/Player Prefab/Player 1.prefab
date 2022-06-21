@@ -1298,7 +1298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddde019a546c94006b68a20c5e98bbcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
+  character: {fileID: 1285256060234488786}
   speed: 5
 --- !u!114 &1268997681548509760
 MonoBehaviour:
@@ -1314,7 +1314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObjects: []
   objectToPool: {fileID: 0}
-  amountToPool: 10
+  amountToPool: 20
   turret: {fileID: 2198783142236759131}
   _animator: {fileID: 1268997681548509761}
   lookRoot: {fileID: 1285256059313181601}

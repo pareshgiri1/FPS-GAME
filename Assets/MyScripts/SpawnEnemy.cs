@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
-    private float spawnRangeX = 20;
-    private float spawaPosZ = 20;
+    private float spawnRangeX = 50;
+    private float spawaPosZ = 50;
     public GameObject enemy;
-    public int i = 0;
+    int i = 0;
     float LifeTime;
     // Start is called before the first frame update
     void Start()

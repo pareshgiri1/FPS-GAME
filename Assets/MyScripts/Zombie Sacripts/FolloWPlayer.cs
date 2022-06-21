@@ -11,7 +11,7 @@ public class FolloWPlayer : MonoBehaviour
     public float distance = 5f;
     public Animator _animator;
     NavMeshAgent agent;
-    
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +47,7 @@ public class FolloWPlayer : MonoBehaviour
         {
             collision.gameObject.SetActive(false);
             Destroy(gameObject);
+          
         }
     }
 }

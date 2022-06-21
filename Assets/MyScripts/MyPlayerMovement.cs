@@ -13,18 +13,14 @@ public class MyPlayerMovement : MonoBehaviour
     {
         instance = this;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
         VerticalInput = Input.GetAxis("Vertical");
         HorizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.forward * VerticalInput * speed * Time.deltaTime);
+        //transform.position += new Vector3(0, 0, VerticalInput * speed);
         transform.Translate(Vector3.right * HorizontalInput * speed * Time.deltaTime);
     }
 }
