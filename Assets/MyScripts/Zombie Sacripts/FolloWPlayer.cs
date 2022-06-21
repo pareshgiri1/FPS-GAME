@@ -46,6 +46,7 @@ public class FolloWPlayer : MonoBehaviour
         if(collision.collider.GetComponent<Bullet>() != null)
         {
             collision.gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }

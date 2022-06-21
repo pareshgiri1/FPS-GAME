@@ -1314,9 +1314,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObjects: []
   objectToPool: {fileID: 0}
-  amountToPool: 20
+  amountToPool: 10
   turret: {fileID: 2198783142236759131}
-  _animator1: {fileID: 1268997681548509761}
+  _animator: {fileID: 1268997681548509761}
   lookRoot: {fileID: 1285256059313181601}
 --- !u!95 &1268997681548509761
 Animator:
