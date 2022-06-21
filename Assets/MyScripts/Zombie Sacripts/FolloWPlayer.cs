@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class FolloWPlayer : MonoBehaviour
 {
@@ -9,10 +10,13 @@ public class FolloWPlayer : MonoBehaviour
     private Rigidbody rb;
     public float distance = 5f;
     public Animator _animator;
+    NavMeshAgent agent;
+    
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        agent = GetComponent<NavMeshAgent>();
        
         //player  = gameObject.GetComponent<Transform>
     }

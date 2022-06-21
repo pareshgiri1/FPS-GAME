@@ -8,7 +8,7 @@ public class ObjectPooling : MonoBehaviour
     public GameObject objectToPool;
     public int amountToPool;
     public GameObject turret;
-    
+    public Animator _animator1;
 
     public GameObject lookRoot;
 
@@ -25,9 +25,8 @@ public class ObjectPooling : MonoBehaviour
             {
                 bullet.transform.position = turret.transform.position;
                 bullet.transform.rotation = turret.transform.rotation;
-                //transform.Translate(Vector3.forward * 5 * Time.deltaTime);
-                //bullet.transform.rotation = transform.rotation;
-                    bullet.SetActive(true);
+                bullet.SetActive(true);
+                _animator1.SetTrigger("Fire");
             }
         }
     }
