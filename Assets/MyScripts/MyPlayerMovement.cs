@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 public class MyPlayerMovement : MonoBehaviour
 {
     public static MyPlayerMovement instance;
@@ -11,6 +12,9 @@ public class MyPlayerMovement : MonoBehaviour
     float HorizontalInput;
     public float health;
     public TextMeshProUGUI HealthText;
+
+    public Image endScreen;
+
     private void Awake()
     {
         instance = this;
@@ -18,6 +22,7 @@ public class MyPlayerMovement : MonoBehaviour
     public void Start()
     {
         health = 100;
+        endScreen.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,6 +32,11 @@ public class MyPlayerMovement : MonoBehaviour
         HorizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.forward * VerticalInput * speed * Time.deltaTime);
         transform.Translate(Vector3.right * HorizontalInput * speed * Time.deltaTime);
+
+        if(health<=0)
+        {
+            endScreen.gameObject.SetActive(true);
+        }
     }
     public void SetHealth()
     {

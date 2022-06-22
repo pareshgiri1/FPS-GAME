@@ -8,7 +8,7 @@ public class FolloWPlayer : MonoBehaviour
     //Transform player;
     public float speed = 4f;
     private Rigidbody rb;
-    public float distance = 5f;
+    float distance = 2f;
     public Animator _animator;
     NavMeshAgent agent;
   
@@ -29,7 +29,7 @@ public class FolloWPlayer : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
             _animator.SetBool("Attack", true);
-            MyPlayerMovement.instance.ReduceHealth(0.5f);
+            MyPlayerMovement.instance.ReduceHealth(0.01f);
         }
         else
         {
