@@ -13,6 +13,7 @@ public class MyPlayerMovement : MonoBehaviour
     public float health;
     public TextMeshProUGUI HealthText;
 
+
     public Image endScreen;
 
     private void Awake()
@@ -36,6 +37,7 @@ public class MyPlayerMovement : MonoBehaviour
         if(health<=0)
         {
             endScreen.gameObject.SetActive(true);
+            Time.timeScale = 0;
         }
     }
     public void SetHealth()

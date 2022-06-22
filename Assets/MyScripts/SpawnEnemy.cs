@@ -24,7 +24,7 @@ public class SpawnEnemy : MonoBehaviour
         LifeTime -= Time.deltaTime;
         if (LifeTime <= 0.1f)
         {
-            if (i < 10)
+            if (i < 100)
             {
                 Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawaPosZ);
                 Instantiate(enemy, spawnPos, enemy.transform.rotation);

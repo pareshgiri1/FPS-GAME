@@ -10,6 +10,7 @@ public class FolloWPlayer : MonoBehaviour
     private Rigidbody rb;
     float distance = 2f;
     public Animator _animator;
+    public float attackaTime;
     NavMeshAgent agent;
   
     // Start is called before the first frame update
@@ -17,19 +18,25 @@ public class FolloWPlayer : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
-       
+        attackaTime = 2;
         //player  = gameObject.GetComponent<Transform>
     }
 
     // Update is called once per frame
     void Update()
     {
+        attackaTime -= Time.deltaTime;
         Vector3 v = MyPlayerMovement.instance.transform.position - transform.position;
         if (v.magnitude < distance)
         {
             rb.velocity = Vector3.zero;
-            _animator.SetBool("Attack", true);
-            MyPlayerMovement.instance.ReduceHealth(0.01f);
+            if (attackaTime<=0)
+            {
+                _animator.SetBool("Attack", true);
+                MyPlayerMovement.instance.ReduceHealth(5f);
+                attackaTime = 2;
+            }
+           
         }
         else
         {
