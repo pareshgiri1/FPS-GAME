@@ -39,7 +39,7 @@ public class MyPlayerMovement : MonoBehaviour
             endScreen.gameObject.SetActive(true);
             Time.timeScale = 0;
         }
-        
+                                                                                                                                                                                  
     }
     public void SetHealth()
     {
